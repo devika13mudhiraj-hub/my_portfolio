@@ -21,6 +21,7 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
       </div>
     </header>
 
@@ -51,15 +52,23 @@
           <div class="card-grid">
             <article class="project-card">
               <h3>Simple landing page</h3>
-              <p>A responsive landing page built with strong headings, a clean layout, and accessible navigation.</p>
+              <p>A responsive landing page built with a strong headline, call-to-action buttons, and accessible keyboard navigation.</p>
             </article>
             <article class="project-card">
-              <h3>Portfolio layout</h3>
-              <p>A portfolio page with semantic sections, a clear reading order, and an easy mobile experience.</p>
+              <h3>Portfolio showcase</h3>
+              <p>A clean portfolio layout that uses semantic sections, responsive grids, and a polished presentation for work samples.</p>
             </article>
             <article class="project-card">
               <h3>Contact experience</h3>
-              <p>An accessible contact form with labels, required fields, and keyboard-friendly focus states.</p>
+              <p>An accessible contact form with explicit labels, validation guidance, and a mailto fallback for static hosting.</p>
+            </article>
+            <article class="project-card">
+              <h3>Skills highlight</h3>
+              <p>A skill card section demonstrating visual hierarchy, consistent spacing, and responsive stacking on mobile.</p>
+            </article>
+            <article class="project-card">
+              <h3>Feature overview</h3>
+              <p>A polished feature grid that highlights service benefits using simple icon-style headings and easy scanning.</p>
             </article>
           </div>
         </div>
@@ -71,5 +80,21 @@
         <p>© 2026 Devika Eega. Projects built for clarity and usability.</p>
       </div>
     </footer>
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem('theme');
+      const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      root.setAttribute('data-theme', initialTheme);
+      if (themeToggle) {
+        themeToggle.textContent = initialTheme === 'dark' ? '☀️' : '🌙';
+        themeToggle.addEventListener('click', () => {
+          const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', nextTheme);
+          localStorage.setItem('theme', nextTheme);
+          themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
+        });
+      }
+    </script>
   </body>
 </html>

@@ -21,6 +21,7 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
       </div>
     </header>
 
@@ -81,5 +82,21 @@
         </nav>
       </div>
     </footer>
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem('theme');
+      const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      root.setAttribute('data-theme', initialTheme);
+      if (themeToggle) {
+        themeToggle.textContent = initialTheme === 'dark' ? '☀️' : '🌙';
+        themeToggle.addEventListener('click', () => {
+          const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', nextTheme);
+          localStorage.setItem('theme', nextTheme);
+          themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
+        });
+      }
+    </script>
   </body>
 </html>

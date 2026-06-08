@@ -21,6 +21,7 @@
             <li><a href="contact.html" aria-current="page">Contact</a></li>
           </ul>
         </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
       </div>
     </header>
 
@@ -48,7 +49,7 @@
             <h2>Contact details</h2>
             <p>Send a message or use the email address below to start the conversation.</p>
             <address>
-              <p><strong>Email:</strong> <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
+              <p><strong>Email:</strong> <a href="mailto:thiranex.internships@outlook.com">thiranex.internships@outlook.com</a></p>
             </address>
           </div>
           <div class="contact-form-wrap">
@@ -88,10 +89,43 @@
 
         var subject = encodeURIComponent('Portfolio contact from ' + name);
         var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
-        window.location.href = 'mailto:hello@yourdomain.com?subject=' + subject + '&body=' + body;
+        window.location.href = 'mailto:thiranex.internships@outlook.com?subject=' + subject + '&body=' + body;
       });
     </script>
 
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem('theme');
+      const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      root.setAttribute('data-theme', initialTheme);
+      if (themeToggle) {
+        themeToggle.textContent = initialTheme === 'dark' ? '☀️' : '🌙';
+        themeToggle.addEventListener('click', () => {
+          const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', nextTheme);
+          localStorage.setItem('theme', nextTheme);
+          themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
+        });
+      }
+
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var name = document.getElementById('full-name').value.trim();
+        var email = document.getElementById('email-address').value.trim();
+        var message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          alert('Please fill in all fields before sending.');
+          return;
+        }
+
+        var subject = encodeURIComponent('Portfolio contact from ' + name);
+        var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+        window.location.href = 'mailto:hello@yourdomain.com?subject=' + subject + '&body=' + body;
+      });
+    </script>
     <footer class="site-footer" role="contentinfo">
       <div class="container">
         <p>© 2026 Devika Eega. Contact experience designed for accessibility.</p>
