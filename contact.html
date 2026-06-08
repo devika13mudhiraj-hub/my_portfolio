@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Devika Eega</title>
+    <meta name="description" content="Contact Devika Eega for accessible web design and development services.">
+    <meta name="author" content="Devika Eega">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a class="brand" href="index.html">Devika Eega</a>
+        <nav class="nav" role="navigation" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" role="main">
+      <section class="hero" aria-labelledby="contact-heading">
+        <div class="container hero-grid">
+          <div class="hero-copy-block">
+            <p class="eyebrow">Contact</p>
+            <h1 id="contact-heading">Get in touch for a simple, accessible website.</h1>
+            <p class="hero-copy">Reach out to discuss your next project, website update, or accessibility review.</p>
+          </div>
+          <aside class="hero-panel" aria-hidden="true">
+            <div class="hero-card">
+              <p class="card-label">Let's connect</p>
+              <h3 class="card-title">Start the conversation</h3>
+              <p class="card-text">A straightforward contact form and friendly communication for your website needs.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="contact-grid" aria-labelledby="contact-form-heading">
+        <div class="container contact-grid-inner">
+          <div class="contact-panel">
+            <h2>Contact details</h2>
+            <p>Send a message or use the email address below to start the conversation.</p>
+            <address>
+              <p><strong>Email:</strong> <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
+            </address>
+          </div>
+          <div class="contact-form-wrap">
+            <h2 id="contact-form-heading">Send a message</h2>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="full-name">Full name</label>
+                <input id="full-name" name="full-name" type="text" required placeholder="Jane Doe">
+              </div>
+              <div class="form-group">
+                <label for="email-address">Email address</label>
+                <input id="email-address" name="email-address" type="email" required placeholder="jane@example.com">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project."></textarea>
+              </div>
+              <button type="submit" class="button primary">Send message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var name = document.getElementById('full-name').value.trim();
+        var email = document.getElementById('email-address').value.trim();
+        var message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          alert('Please fill in all fields before sending.');
+          return;
+        }
+
+        var subject = encodeURIComponent('Portfolio contact from ' + name);
+        var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+        window.location.href = 'mailto:hello@yourdomain.com?subject=' + subject + '&body=' + body;
+      });
+    </script>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>© 2026 Devika Eega. Contact experience designed for accessibility.</p>
+      </div>
+    </footer>
+  </body>
+</html>

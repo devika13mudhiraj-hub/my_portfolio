@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Devika Eega</title>
+    <meta name="description" content="Explore accessible web projects that showcase semantic HTML, responsive layouts, and clean design.">
+    <meta name="author" content="Devika Eega">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a class="brand" href="index.html">Devika Eega</a>
+        <nav class="nav" role="navigation" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" role="main">
+      <section class="hero" aria-labelledby="projects-heading">
+        <div class="container hero-grid">
+          <div class="hero-copy-block">
+            <p class="eyebrow">Projects</p>
+            <h1 id="projects-heading">Accessible website projects with clean structure.</h1>
+            <p class="hero-copy">Here are a few examples of projects built with usability, accessibility, and responsive design in mind.</p>
+          </div>
+          <aside class="hero-panel" aria-hidden="true">
+            <div class="hero-card">
+              <p class="card-label">Showcase</p>
+              <h3 class="card-title">Highlighted work</h3>
+              <p class="card-text">Each project is designed to be easy to use, easy to read, and easy to maintain.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="project-list" aria-labelledby="featured-heading">
+        <div class="container">
+          <div class="section-heading-row">
+            <p class="section-intro">Featured</p>
+            <h2 id="featured-heading">Selected work</h2>
+          </div>
+          <div class="card-grid">
+            <article class="project-card">
+              <h3>Simple landing page</h3>
+              <p>A responsive landing page built with strong headings, a clean layout, and accessible navigation.</p>
+            </article>
+            <article class="project-card">
+              <h3>Portfolio layout</h3>
+              <p>A portfolio page with semantic sections, a clear reading order, and an easy mobile experience.</p>
+            </article>
+            <article class="project-card">
+              <h3>Contact experience</h3>
+              <p>An accessible contact form with labels, required fields, and keyboard-friendly focus states.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>© 2026 Devika Eega. Projects built for clarity and usability.</p>
+      </div>
+    </footer>
+  </body>
+</html>
