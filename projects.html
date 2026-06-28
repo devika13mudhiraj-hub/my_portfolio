@@ -1,100 +1,102 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects | Devika Eega</title>
-    <meta name="description" content="Explore accessible web projects that showcase semantic HTML, responsive layouts, and clean design.">
-    <meta name="author" content="Devika Eega">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header" role="banner">
-      <div class="container">
-        <a class="brand" href="index.html">Devika Eega</a>
-        <nav class="nav" role="navigation" aria-label="Primary navigation">
-          <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
+    <meta name="description"
+        content="Projects showcasing full‑stack development, AI subscription audit platform, and weather dashboard." />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Devika Eega</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
             <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
-      </div>
-    </header>
+        </ul>
+        <button id="themeBtn" class="theme-toggle"><i class="fas fa-moon"></i></button>
+    </nav>
 
-    <main id="main-content" role="main">
-      <section class="hero" aria-labelledby="projects-heading">
-        <div class="container hero-grid">
-          <div class="hero-copy-block">
-            <p class="eyebrow">Projects</p>
-            <h1 id="projects-heading">Accessible website projects with clean structure.</h1>
-            <p class="hero-copy">Here are a few examples of projects built with usability, accessibility, and responsive design in mind.</p>
-          </div>
-          <aside class="hero-panel" aria-hidden="true">
-            <div class="hero-card">
-              <p class="card-label">Showcase</p>
-              <h3 class="card-title">Highlighted work</h3>
-              <p class="card-text">Each project is designed to be easy to use, easy to read, and easy to maintain.</p>
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="project-cards" style="display: flex; flex-direction: column; gap: 2rem;">
+            <!-- SpendOptic -->
+            <div class="project-card" style="width: 100%;">
+                <h3>SpendOptic (AI Subscription Audit Platform)</h3>
+                <p class="project-date" style="color: var(--primary); font-weight: 600; margin-top: 0.2rem;">May 2026 –
+                    Present</p>
+                <p style="margin-top: 0.5rem;"><strong>Tech Stack:</strong> React.js, Next.js, TypeScript, Tailwind CSS,
+                    Vite</p>
+                <ul class="project-bullets"
+                    style="margin-top: 0.8rem; margin-left: 1.5rem; line-height: 1.8; list-style-type: disc;">
+                    <li>Developed an AI subscription auditing platform that analyzes startup spending across tools like
+                        ChatGPT, Claude, Cursor, Copilot, and Gemini.</li>
+                    <li>Built a deterministic audit engine to detect redundant subscriptions, over-provisioned team
+                        plans, and generate finance-friendly savings recommendations.</li>
+                    <li>Designed a responsive multi-section frontend with reusable React components, dynamic FAQ
+                        accordions, and optimized user experience using Tailwind CSS.</li>
+                    <li>Integrated GitHub and Railway deployment workflows with production-ready build configuration and
+                        version control practices.</li>
+                </ul>
+                <a href="https://github.com/devika13mudhiraj-hub/SpendOptic" class="project-link" target="_blank"
+                    style="margin-top: 1rem;">GitHub Repo</a>
             </div>
-          </aside>
-        </div>
-      </section>
 
-      <section class="project-list" aria-labelledby="featured-heading">
-        <div class="container">
-          <div class="section-heading-row">
-            <p class="section-intro">Featured</p>
-            <h2 id="featured-heading">Selected work</h2>
-          </div>
-          <div class="card-grid">
-            <article class="project-card">
-              <h3>Simple landing page</h3>
-              <p>A responsive landing page built with a strong headline, call-to-action buttons, and accessible keyboard navigation.</p>
-            </article>
-            <article class="project-card">
-              <h3>Portfolio showcase</h3>
-              <p>A clean portfolio layout that uses semantic sections, responsive grids, and a polished presentation for work samples.</p>
-            </article>
-            <article class="project-card">
-              <h3>Contact experience</h3>
-              <p>An accessible contact form with explicit labels, validation guidance, and a mailto fallback for static hosting.</p>
-            </article>
-            <article class="project-card">
-              <h3>Skills highlight</h3>
-              <p>A skill card section demonstrating visual hierarchy, consistent spacing, and responsive stacking on mobile.</p>
-            </article>
-            <article class="project-card">
-              <h3>Feature overview</h3>
-              <p>A polished feature grid that highlights service benefits using simple icon-style headings and easy scanning.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
+            <!-- Expense Tracker -->
+            <div class="project-card" style="width: 100%;">
+                <h3>Personal Expense Tracker</h3>
+                <p class="project-date" style="color: var(--primary); font-weight: 600; margin-top: 0.2rem;">Aug 2025 –
+                    Oct 2025</p>
+                <p style="margin-top: 0.5rem;"><strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB (MERN
+                    Stack)</p>
+                <ul class="project-bullets"
+                    style="margin-top: 0.8rem; margin-left: 1.5rem; line-height: 1.8; list-style-type: disc;">
+                    <li>Built a full-stack MERN application to log, categorize, and visualize personal expenses with
+                        dashboard analytics.</li>
+                    <li>Implemented JWT authentication with bcrypt password hashing and secure user login functionality.
+                    </li>
+                    <li>Integrated Chart.js for expense insights, monthly trends, and category-based analytics.</li>
+                    <li>Designed RESTful APIs for CRUD operations and a responsive mobile-first user interface.</li>
+                </ul>
+                <a href="https://github.com/devika13mudhiraj-hub/expense-tracker" class="project-link" target="_blank"
+                    style="margin-top: 1rem;">GitHub Repo</a>
+            </div>
 
-    <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <p>© 2026 Devika Eega. Projects built for clarity and usability.</p>
-      </div>
+            <!-- Weather Dashboard -->
+            <div class="project-card" style="width: 100%;">
+                <h3>Weather Forecast Dashboard</h3>
+                <p class="project-date" style="color: var(--primary); font-weight: 600; margin-top: 0.2rem;">Aug 2024 –
+                    Nov 2024</p>
+                <p style="margin-top: 0.5rem;"><strong>Tech Stack:</strong> React.js, JavaScript, OpenWeatherMap API</p>
+                <ul class="project-bullets"
+                    style="margin-top: 0.8rem; margin-left: 1.5rem; line-height: 1.8; list-style-type: disc;">
+                    <li>Built a real-time weather dashboard using external REST APIs with geolocation-based city
+                        detection.</li>
+                    <li>Implemented responsive UI components, API integration, dynamic weather-based themes, and
+                        optimized data fetching for improved user experience.</li>
+                </ul>
+                <a href="https://github.com/devika13mudhiraj-hub/weather_dashboard" class="project-link" target="_blank"
+                    style="margin-top: 1rem;">GitHub Repo</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Devika Eega. All rights reserved.</p>
     </footer>
-    <script>
-      const themeToggle = document.getElementById('theme-toggle');
-      const root = document.documentElement;
-      const savedTheme = localStorage.getItem('theme');
-      const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      root.setAttribute('data-theme', initialTheme);
-      if (themeToggle) {
-        themeToggle.textContent = initialTheme === 'dark' ? '☀️' : '🌙';
-        themeToggle.addEventListener('click', () => {
-          const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          root.setAttribute('data-theme', nextTheme);
-          localStorage.setItem('theme', nextTheme);
-          themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
-        });
-      }
-    </script>
-  </body>
+    <script src="script.js"></script>
+</body>
+
 </html>

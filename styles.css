@@ -1,7 +1,7 @@
 ﻿/* Advanced responsive portfolio stylesheet */
 :root {
   color-scheme: light;
-  --bg: #f8fafc;
+  --bg: #14508d;
   --surface: #ffffff;
   --surface-soft: rgba(255, 255, 255, 0.82);
   --text: #0f172a;
@@ -51,7 +51,9 @@ html {
   font-size: 16px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -64,13 +66,18 @@ body {
   line-height: 1.7;
 }
 
-img, svg, video {
+img,
+svg,
+video {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-button, input, textarea, a {
+button,
+input,
+textarea,
+a {
   font: inherit;
 }
 
@@ -304,11 +311,11 @@ html[data-theme='dark'] .testimonial-card {
   pointer-events: none;
 }
 
-.hero-card > *,
-.info-card > *,
-.project-card > *,
-.contact-panel > *,
-.testimonial-card > * {
+.hero-card>*,
+.info-card>*,
+.project-card>*,
+.contact-panel>*,
+.testimonial-card>* {
   position: relative;
 }
 
@@ -518,6 +525,7 @@ button {
 }
 
 @media (min-width: 64rem) {
+
   .site-header .container,
   .site-footer .container {
     grid-template-columns: 1fr auto;
@@ -539,6 +547,7 @@ button {
 }
 
 @media (max-width: 47.99rem) {
+
   .site-header,
   .site-footer {
     padding: 1rem 0;

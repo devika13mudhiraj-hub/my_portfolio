@@ -1,102 +1,187 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devika Eega | Portfolio</title>
-    <meta name="description" content="A portfolio website showcasing accessible web design and development work.">
-    <meta name="author" content="Devika Eega">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header" role="banner">
-      <div class="container">
-        <a class="brand" href="index.html">Devika Eega</a>
-        <nav class="nav" role="navigation" aria-label="Primary navigation">
-          <ul class="nav-list">
-            <li><a href="index.html" aria-current="page">Home</a></li>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devika Eega – Personal Portfolio</title>
+    <meta name="description"
+        content="Full‑Stack Web Developer portfolio showcasing projects, skills, and achievements of Devika Eega." />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Devika Eega</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
             <li><a href="about.html">About</a></li>
+
+            <li><a href="skills.html">Skills</a></li>
             <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
             <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
-      </div>
-    </header>
+        </ul>
+        <button id="themeBtn" class="theme-toggle"><i class="fas fa-moon"></i></button>
+    </nav>
 
-    <main id="main-content" role="main">
-      <section class="hero" aria-labelledby="hero-heading">
-        <div class="container hero-grid">
-          <div class="hero-copy-block">
-            <p class="eyebrow">Web design & development</p>
-            <h1 id="hero-heading">Accessible portfolio websites built with semantic HTML.</h1>
-            <p class="hero-copy">I create simple, responsive websites with clear structure, strong typography, and keyboard-friendly navigation.</p>
-            <div class="hero-actions">
-              <a class="button primary" href="projects.html">View projects</a>
-              <a class="button secondary" href="contact.html">Contact me</a>
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <div class="home-content">
+            <h1>Hi, I'm <span class="highlight">Devika Eega</span></h1>
+            <h2 class="typed-text"></h2>
+            <p>Full Stack Web Developer | React Developer | Problem Solver</p>
+            <a href="assets/resume.docx" class="btn" download>Download Resume</a>
+            <div class="social-links">
+                <a href="https://github.com/devika13mudhiraj-hub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/devika-eega/" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
-          </div>
-          <aside class="hero-panel" aria-hidden="true">
-            <div class="hero-card">
-              <p class="card-label">Featured</p>
-              <h3 class="card-title">Clean, accessible design</h3>
-              <p class="card-text">A simple portfolio with semantic markup, visible focus states, and a responsive layout that works on all devices.</p>
+        </div>
+        <div class="home-image">
+            <img src="images/profile.jpg" alt="Profile Photo" />
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a B.Tech Information Technology student with hands-on experience building full-stack web development and
+            data analytics. Proficient in React.js, Node.js, MySQL, Python, SQL, and data analysis. Strong foundation in
+            DSA, database design, and REST APIs, building projects that deliver data-driven, user-focused solutions
+            daily.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills and Interests</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
             </div>
-          </aside>
+            <div class="skill-item">
+                <h3>React.js</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Node.js</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>Python</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>SQL / Databases</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="overview" aria-labelledby="overview-heading">
-        <div class="container">
-          <div class="section-heading-row">
-            <p class="section-intro">What I offer</p>
-            <h2 id="overview-heading">A user-friendly portfolio with a strong foundation.</h2>
-          </div>
-          <ul class="feature-grid">
-            <li>
-              <h3>Semantic structure</h3>
-              <p>Clear HTML5 landmarks and headings that improve readability and search engine understanding.</p>
-            </li>
-            <li>
-              <h3>Accessible interactions</h3>
-              <p>Keyboard navigation, focus outlines, and simple contrast for a better experience.</p>
-            </li>
-            <li>
-              <h3>Responsive layouts</h3>
-              <p>Mobile-friendly pages that adapt naturally to smaller screens and modern devices.</p>
-            </li>
-          </ul>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <h3>SpendOptic (AI Subscription Audit Platform)</h3>
+                <p class="project-date"><strong>May 2026 – Present</strong></p>
+                <p style="margin-top: 0.3rem;"><strong>Tech Stack:</strong> React.js, Next.js, TypeScript, Tailwind CSS,
+                    Vite</p>
+                <ul class="project-bullets"
+                    style="margin-top: 0.5rem; margin-left: 1.2rem; margin-bottom: 0.5rem; list-style-type: disc;">
+                    <li>Developed an AI subscription auditing platform that analyzes startup spending across tools like
+                        ChatGPT, Claude, Cursor, Copilot, and Gemini.</li>
+                    <li>Built a deterministic audit engine to detect redundant subscriptions, over-provisioned team
+                        plans, and generate finance-friendly savings recommendations.</li>
+                    <li>Designed a responsive multi-section frontend with reusable React components, FAQ accordions, and
+                        optimized user experience using Tailwind.</li>
+                </ul>
+                <a href="https://github.com/devika13mudhiraj-hub/SpendOptic" class="project-link" target="_blank">GitHub
+                    Repo</a>
+            </div>
+            <div class="project-card">
+                <h3>Personal Expense Tracker</h3>
+                <p class="project-date"><strong>Aug 2025 – Oct 2025</strong></p>
+                <p style="margin-top: 0.3rem;"><strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB
+                    (MERN)</p>
+                <ul class="project-bullets"
+                    style="margin-top: 0.5rem; margin-left: 1.2rem; margin-bottom: 0.5rem; list-style-type: disc;">
+                    <li>Built a full-stack MERN application to log, categorize, and visualize personal expenses with
+                        dashboard analytics.</li>
+                    <li>Implemented JWT authentication with bcrypt password hashing and secure user login functionality.
+                    </li>
+                    <li>Integrated Chart.js for expense insights, monthly trends, and category-based analytics.</li>
+                </ul>
+                <a href="https://github.com/devika13mudhiraj-hub/expense-tracker" class="project-link"
+                    target="_blank">GitHub Repo</a>
+            </div>
+            <div class="project-card">
+                <h3>Weather Forecast Dashboard</h3>
+                <p class="project-date"><strong>Aug 2024 – Nov 2024</strong></p>
+                <p style="margin-top: 0.3rem;"><strong>Tech Stack:</strong> React.js, JavaScript, OpenWeatherMap API</p>
+                <ul class="project-bullets"
+                    style="margin-top: 0.5rem; margin-left: 1.2rem; margin-bottom: 0.5rem; list-style-type: disc;">
+                    <li>Built a real-time weather dashboard using external REST APIs with geolocation-based city
+                        detection.</li>
+                    <li>Implemented responsive UI components, API integration, dynamic weather-based themes, and
+                        optimized data fetching.</li>
+                </ul>
+                <a href="https://github.com/devika13mudhiraj-hub/weather_dashboard" class="project-link"
+                    target="_blank">GitHub Repo</a>
+            </div>
         </div>
-      </section>
-    </main>
+    </section>
 
-    <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <p>© 2026 Devika Eega. Built with accessibility and simplicity in mind.</p>
-        <nav aria-label="Footer navigation">
-          <ul class="footer-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <h2>Certifications</h2>
+        <ul class="cert-list" style="margin-left: 1.2rem; line-height: 1.8; list-style-type: disc;">
+            <li><strong>Programming in Java</strong> – NPTEL Online Certification (Jan–Apr 2026)</li>
+            <li><strong>SQL &amp; Database Design</strong> – HackerRank Certified</li>
+            <li><strong>UI/UX Design Workshop</strong> – Student Enrichment Program, Medi Coder &amp; Nalla Narasimha
+                Reddy Group of Institutions (Oct 2025)</li>
+        </ul>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <h2>Achievements</h2>
+        <ul class="ach-list" style="margin-left: 1.2rem; line-height: 1.8; list-style-type: disc;">
+            <li>Solved <strong>200+ problems</strong> on LeetCode and HackerRank covering arrays, trees, strings,
+                recursion, and dynamic programming.</li>
+            <li>Participated in Student Enrichment Program workshop on <strong>UI/UX Design</strong>, gaining exposure
+                to user-centered design principles, wireframing, and interface design basics.</li>
+            <li>Active participant in coding challenges and problem-solving practice on LeetCode and HackerRank.</li>
+            <li>Engaged in collaborative academic projects involving full-stack web development and software design.
+            </li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Devika Eega. All rights reserved.</p>
     </footer>
-    <script>
-      const themeToggle = document.getElementById('theme-toggle');
-      const root = document.documentElement;
-      const savedTheme = localStorage.getItem('theme');
-      const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      root.setAttribute('data-theme', initialTheme);
-      if (themeToggle) {
-        themeToggle.textContent = initialTheme === 'dark' ? '☀️' : '🌙';
-        themeToggle.addEventListener('click', () => {
-          const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          root.setAttribute('data-theme', nextTheme);
-          localStorage.setItem('theme', nextTheme);
-          themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
-        });
-      }
-    </script>
-  </body>
+
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+
 </html>

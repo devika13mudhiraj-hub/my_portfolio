@@ -1,96 +1,115 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Devika Eega</title>
-    <meta name="description" content="Learn about Devika Eega, a web designer and developer focused on accessible, semantic digital experiences.">
-    <meta name="author" content="Devika Eega">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header" role="banner">
-      <div class="container">
-        <a class="brand" href="index.html">Devika Eega</a>
-        <nav class="nav" role="navigation" aria-label="Primary navigation">
-          <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" aria-current="page">About</a></li>
+    <meta name="description"
+        content="About Devika Eega – B.Tech Information Technology student and Full Stack Web Developer." />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Devika Eega</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
             <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
             <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
-      </div>
-    </header>
+        </ul>
+        <button id="themeBtn" class="theme-toggle"><i class="fas fa-moon"></i></button>
+    </nav>
 
-    <main id="main-content" role="main">
-      <section class="page-hero" aria-labelledby="about-heading">
+    <!-- Hero Section -->
+    <section class="hero-section section">
         <div class="container hero-grid">
-          <div class="hero-copy-block">
-            <p class="eyebrow">About me</p>
-            <h1 id="about-heading">Designing accessible websites with clarity and care.</h1>
-            <p class="hero-copy">I build thoughtful front-end projects using semantic HTML, responsive CSS, and accessible best practices.</p>
-          </div>
-          <aside class="hero-panel" aria-hidden="true">
-            <div class="hero-card">
-              <p class="card-label">Approach</p>
-              <h3 class="card-title">Clear, accessible process</h3>
-              <p class="card-text">Focus on usable content, clean layout, and code that is easy to maintain and extend.</p>
+            <div class="hero-copy-block">
+                <h1 class="hero-title">Hi, I’m Devika – Full‑Stack Web Developer</h1>
+                <p class="hero-subtitle">Passionate Full-Stack Developer specializing in React.js, Node.js, and modern
+                    JavaScript, dedicated to creating responsive, scalable, and impactful web applications.</p>
             </div>
-          </aside>
         </div>
-      </section>
+    </section>
 
-      <section class="profile-summary" aria-labelledby="profile-heading">
-        <div class="container">
-          <div class="section-heading-row">
-            <p class="section-intro">Profile</p>
-            <h2 id="profile-heading">Strong fundamentals for every project.</h2>
-          </div>
-          <p>I create websites that perform well, support users with clear interactions, and are built with semantic structure in mind.</p>
-        </div>
-      </section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p> I am a final-year B.Tech Information Technology student with a strong foundation in software development and
+            hands-on experience in Python, Java, JavaScript, React.js, Node.js, HTML, CSS, and databases. I have built
+            full-stack projects, including an AI subscription auditing platform, a Personal Expense Tracker, and a
+            Weather Forecast Dashboard, gaining practical experience in REST APIs, authentication, and responsive web
+            development. I continuously enhance my skills through coding practice, certifications, and have solved 200+
+            problems on LeetCode and HackerRank. As a quick learner and motivated fresher, I am eager to contribute to
+            real-world projects, learn from experienced professionals, and grow as a software developer while delivering
+            meaningful solutions.</p>
 
-      <section class="skills" aria-labelledby="skills-heading">
-        <div class="container">
-          <div class="section-heading-row">
-            <p class="section-intro">Skills</p>
-            <h2 id="skills-heading">Tools and techniques</h2>
-          </div>
-          <ul class="skill-list">
-            <li class="skill-badge">HTML5</li>
-            <li class="skill-badge">CSS3</li>
-            <li class="skill-badge">Responsive design</li>
-            <li class="skill-badge">WCAG accessibility</li>
-            <li class="skill-badge">SEO fundamentals</li>
-            <li class="skill-badge">Performance</li>
-          </ul>
-        </div>
-      </section>
-    </main>
+        <h3 style="margin-top: 2rem;">Education</h3>
+        <table class="education-table" style="margin-top: 1rem; margin-bottom: 2rem;">
+            <thead>
+                <tr>
+                    <th>Degree / Course</th>
+                    <th>Institution</th>
+                    <th>Timeline / Status</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Bachelor of Technology, Information Technology</strong></td>
+                    <td>Nalla Narsimha Reddy Group of Institutions, Hyderabad, Telangana</td>
+                    <td>2023 – Present</td>
+                    <td>CGPA: 8.2/10</td>
+                </tr>
+                <tr>
+                    <td><strong>Intermediate (MPC)</strong></td>
+                    <td>BC Welfare College, Telangana</td>
+                    <td>2020 – 2022</td>
+                    <td>Percentage: 92%</td>
+                </tr>
+                <tr>
+                    <td><strong>Secondary School Certificate (SSC)</strong></td>
+                    <td>St. Francis De Sales High School, Telangana</td>
+                    <td>Completed 2020</td>
+                    <td>GPA: 9.8/10</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <p>© 2026 Devika Eega. Simple, accessible design at the core.</p>
-      </div>
+        <h3>Relevant Coursework</h3>
+        <ul class="about-list"
+            style="margin-left: 1.2rem; margin-top: 0.5rem; margin-bottom: 2rem; list-style-type: disc;">
+            <li>Data Structures &amp; Algorithms (DSA)</li>
+            <li>Database Management Systems (DBMS)</li>
+            <li>Operating Systems (OS)</li>
+            <li>Web Technologies &amp; Software Engineering</li>
+            <li>Object-Oriented Programming (OOP)</li>
+            <li>Computer Networks</li>
+        </ul>
+
+        <h3>Co-Curricular &amp; Academic Activities</h3>
+        <ul class="about-list"
+            style="margin-left: 1.2rem; margin-top: 0.5rem; list-style-type: disc; line-height: 1.8;">
+            <li>Participated in Student Enrichment Program workshop on <strong>UI/UX Design</strong>, gaining exposure
+                to user-centered design principles, wireframing, and interface design basics.</li>
+            <li>Active participant in coding challenges and problem-solving practice on LeetCode and HackerRank.</li>
+            <li>Engaged in collaborative academic projects involving full-stack web development and software design.
+            </li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Devika Eega. All rights reserved.</p>
     </footer>
-    <script>
-      const themeToggle = document.getElementById('theme-toggle');
-      const root = document.documentElement;
-      const savedTheme = localStorage.getItem('theme');
-      const initialTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      root.setAttribute('data-theme', initialTheme);
-      if (themeToggle) {
-        themeToggle.textContent = initialTheme === 'dark' ? '☀️' : '🌙';
-        themeToggle.addEventListener('click', () => {
-          const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          root.setAttribute('data-theme', nextTheme);
-          localStorage.setItem('theme', nextTheme);
-          themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
-        });
-      }
-    </script>
-  </body>
+    <script src="script.js"></script>
+</body>
+
 </html>
